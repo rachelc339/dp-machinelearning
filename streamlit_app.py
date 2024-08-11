@@ -30,14 +30,15 @@ with st.sidebar:
   flipper_length_mm = st.slider('Dlipper length (mm)', 172.8, 231.0, 201.0)
   body_mass_g = st.slider('Body mass (g)', 2700.0 , 6300.0 ,4207.0)
 
-#Create a DF for input features 
-data = {'island', island,
-       'gender', gender,
-       'bill_length_mm', bill_length_mm,
-       'bill_depth_mm', bill_depth_mm, 
-       'flipper_length_mm', flipper_length_mm,
-       'body_mass_g', body_mass_g}
-input_df = pd.DataFrame(data, index=[0])
+  #Create a DF for input features 
+  data = {'island', island,
+         'gender', gender,
+         'bill_length_mm', bill_length_mm,
+         'bill_depth_mm', bill_depth_mm, 
+         'flipper_length_mm', flipper_length_mm,
+         'body_mass_g', body_mass_g}
+  input_df = pd.DataFrame(data, index=[0])
+  
 input_df
 
 
