@@ -40,6 +40,12 @@ with st.sidebar:
   input_df = pd.DataFrame(data, index=[0])
   input_penguins = pd.concat([input_df, X_raw], axis=0)
 
+with st.expander('Input Features'):
+  st.write('**Input Penguins**')
+  input_df
+  st.write('**Combined Penguins Data**')
+  input_penguins
+
 #Encode x
 encode = ['island','sex']
 df_penguins = pd.get_dummies(input_penguins, prefix=encode) #combine column name and return the variable in 0/1
@@ -54,15 +60,11 @@ def target_encode(val):
   return target_mapper[val]
 
 y = y_raw.apply(target_encode)
-y
 
-with st.expander('Input Features'):
-  st.write('**Input Penguins**')
-  input_df
-  st.write('**Combined Penguins Data**')
-  input_penguins
-  st.write('**Encoded input data**')
+with st.expander('Data preparation'): 
+  st.write('**Encoded input penguin (X)**')
   input_row
-
+  st.write('**Encoded y**')
+  y
 
 
