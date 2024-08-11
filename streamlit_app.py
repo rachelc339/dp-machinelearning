@@ -75,7 +75,7 @@ with st.expander('Data preparation'):
 
 #Model Training and Inference
 clf = RandomForestClassifier()
-clf.fit(X_raw,y)
+clf.fit(X,y)
 
 #Apply model to make predictions 
 prediction = clf.predict(input_row)
